@@ -7,7 +7,7 @@ const AboutMe = () => {
             <div className="row align-items-start">
                 <div className="col-md-4">
                     <img 
-                        src="../public/ike-b-p1.jpg" 
+                        src="/public/ike-b-p1.jpg" 
                         className="img-fluid rounded" 
                         alt="portrait of Ike Byers" 
                     />

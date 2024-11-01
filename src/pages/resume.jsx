@@ -77,7 +77,7 @@ const Resume = () => {
             <br></br>
 
             <a 
-                href="../public/resumePlaceholder.pdf"
+                href="/public/resumePlaceholder.pdf"
                 className="resume-download-btn"
                 target="_blank"
                 rel="noopener noreferrer"
