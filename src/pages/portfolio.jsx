@@ -9,7 +9,7 @@ const Portfolio = () => {
             techStack: ["HTML", "CSS", "JavaScript"],
             link: "https://github.com/ikebyers/Rainy-Day-Fund",
             link2: "",
-            image: "/public/project-photos/rainydayfund.jpg"
+            image: "/project-photos/rainydayfund.jpg"
         },
         {
             title: "StaffSync",
@@ -17,7 +17,7 @@ const Portfolio = () => {
             techStack: ["Node.js", "Express", "PostgreSQL"],
             link: "https://github.com/ikebyers/StaffSync-Employee-Tracker",
             link2: "",
-            image: "/public/project-photos/staffsync.jpg"
+            image: "/project-photos/staffsync.jpg"
         },
         {
             title: "Ike Byers Portfolio",
@@ -25,7 +25,7 @@ const Portfolio = () => {
             techStack: ["React.js", "JavaScript"],
             link: "https://github.com/ikebyers/Ike-Byers-Portfolio",
             link2: "",
-            image: "/public/project-photos/portfolio.jpg"
+            image: "/project-photos/portfolio.jpg"
         },
         {
             title: "READme Builder",
@@ -33,7 +33,7 @@ const Portfolio = () => {
             techStack: ["JavaScript", "Node.js"],
             link: "https://github.com/ikebyers/READme-Builder",
             link2: "",
-            image: "/public/project-photos/readme.jpg"
+            image: "/project-photos/readme.jpg"
         },
         {
             title: "Example Project 5",
