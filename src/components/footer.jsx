@@ -14,7 +14,7 @@ const Footer = () => {
             <a href="https://github.com/ikebyers" target="_blank" rel="noopener noreferrer">
                 <FaGithub size={24} />
             </a>
-            <a href="https://www.linkedin.com/in/isaac-byers-9381b0185/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/ike-byers-9381b0185/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin size={24} />
             </a>
             <a href="https://www.youtube.com/@yesbeki" target="_blank" rel="noopener noreferrer">
