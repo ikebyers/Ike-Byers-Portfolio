@@ -4,7 +4,6 @@ const Resume = () => {
     return (
         <div className="resume-page">
         <header className="resume-header">
-        <br></br>
             <h1>Ike Byers</h1>
             <h2>Web Developer | Software Engineer | Music Producer</h2>
 

@@ -1,15 +1,13 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
 :root {
-  --bs-primary: #4B3B47 !important;
-  --bs-secondary: #6A6B83 !important;
-  --bs-tertiary: #685874 !important;
-  --bs-quaternary: #76949F !important;
+  --bs-neutral: #46403B !important;
+  --bs-secondary: #6A74A7 !important;
+  --bs-tertiary: #C8E763 !important;
+  --bs-quaternary: #E19B6E !important;
   --bs-success: #9ee1b1 !important;
   --bs-danger: #e26e61 !important; 
 }
@@ -18,9 +16,13 @@ body {
   background-color: var(--bs-secondary);
 }
 
-
-header, footer {
-  background-color: var(--bs-primary);
+.body-bg::before {
+  background: url("/salvatore-andrea-unsplash.jpg");
+  width: max-content;
+  height: max-content;
+  /* opacity: 80%; */
+  background-color: var(--bs-secondary);
+  mix-blend-mode: color-burn;
 }
 
 form {
@@ -28,13 +30,28 @@ form {
 }
 
 #project-cards {
-  margin: 1rem;
+  margin: 2rem;
 }
 
 h1 {
   background-color: var(--bs-quaternary);
+  color: var(--bs-neutral);
+  font-size: 2rem;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  /* padding-top: 2rem !important; */
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
+}
+
+nav {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
 }
 
 footer {
@@ -56,23 +73,84 @@ ul {
   text-align: center;
 }
 
-img {
-  margin: auto;
-  margin-bottom: 1.5rem;
-
+.nav-link-cus.active {
+  color: var(--bs-neutral) !important; 
+  font-weight: bold;
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
+.about-me-content {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.bio-image {
+  width: 100%;
+  border-radius: 25px !important;
+  min-width: 30%;
+  /* align-items: flex-start; */
+  display: flex;
+  margin: 3rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
+}
+
+.bio-card {
+  align-items: flex-end;
+  display: flex;
+  margin: 3rem;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
+}
 
 .card {
   padding: 2em;
+  justify-content: end;
+  background-color: var(--bs-neutral);
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.nav-logo {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.nav-items-cus {
+  /* align-items: end; */
+  justify-content: end;
+  display: flex;
+  margin: auto;
+}
+
+.nav-items-ul {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.nav-single-item {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.nav-link-cus {
+  border-radius: 5px;
+  color: var(--bs-tertiary);
+}
+
+.nav-bg {
+  background-color: var(--bs-neutral);
+}
+
+.footer {
+background-color: var(--bs-neutral);
 }
