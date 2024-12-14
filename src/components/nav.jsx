@@ -11,7 +11,7 @@ const Nav = () => {
                 <NavLink className="navbar-brand" to="/">
                         <div className="container">
                             <a className="navbar-brand" href="#">
-                                <img src="/ikelogo3.png" alt="ike byers logo" width="120" height="24"></img>
+                                <img src="/ikelogo3.png" alt="ike byers logo" width="250" height="50"></img>
                             </a>
                         </div>
                 </NavLink>
