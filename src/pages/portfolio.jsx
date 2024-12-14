@@ -24,7 +24,7 @@ const Portfolio = () => {
             description: "A tracking and analytics application for monitoring employee information",
             techStack: ["Node.js", "Express", "PostgreSQL"],
             link: "https://github.com/ikebyers/StaffSync-Employee-Tracker",
-            link2: "N/A",
+            link2: "",
             image: "/project-photos/staffsync.png"
         },
         {
@@ -32,7 +32,7 @@ const Portfolio = () => {
             description: "A savings calculator focused on building budgets for hobbies",
             techStack: ["HTML", "CSS", "JavaScript"],
             link: "https://github.com/ikebyers/Rainy-Day-Fund",
-            link2: "N/A",
+            link2: "",
             image: "/project-photos/rainydayfund.png"
         },
         {
@@ -48,7 +48,7 @@ const Portfolio = () => {
             description: "A five-day weather forecast application utilizing Open Weather API for location based search queries",
             techStack: ["TypeScript", "Vite", "Express"],
             link: "https://github.com/ikebyers/BreezeAhead",
-            link2: "N/A",
+            link2: "",
             image: "/project-photos/breezeahead.jpg"
         },
     ];
