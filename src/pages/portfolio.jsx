@@ -49,7 +49,7 @@ const Portfolio = () => {
             techStack: ["TypeScript", "Vite", "Express"],
             link: "https://github.com/ikebyers/BreezeAhead",
             link2: "",
-            image: "/project-photos/breezeahead.jpg"
+            image: "/project-photos/breezeahead.png"
         },
     ];
 
