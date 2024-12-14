@@ -10,10 +10,10 @@
 - [Questions](#questions)
 
 ## Deployed Web Application
-View my deployed portfolio application: 
+View my deployed portfolio application: https://ikebyersportfolio.netlify.app/
 
 ## Screenshots of Web Application
-View screenshots of my deployed web application with this link:
+View screenshots of my deployed web application with this link: https://drive.google.com/drive/folders/1fkxt_BgJZTIO-fu7Axnhus0rfAfB5Wo4?usp=sharing
 
 ## Description
 A personal portfolio website for Ike Byers that includes web development projects, 'About' info, a contact submission form, and links to socials.
