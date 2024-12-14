@@ -38,7 +38,7 @@ const Portfolio = () => {
         {
             title: "bibliogle",
             description: "An online book collection that has user database functionality utilizing Google Books API",
-            techStack: ["React.js", "JavaScript"],
+            techStack: ["React.js", "TypeScript", "Express", "GraphQL"],
             link: "https://github.com/ikebyers/Ike-Byers-Portfolio",
             link2: "https://bibliogle.onrender.com/",
             image: "/project-photos/bibliogle.png"
@@ -46,7 +46,7 @@ const Portfolio = () => {
         {
             title: "BreezeAhead",
             description: "A five-day weather forecast application utilizing Open Weather API for location based search queries",
-            techStack: ["TypeScript", "Vite", "Express"],
+            techStack: ["TypeScript", "Vite", "Express", "React"],
             link: "https://github.com/ikebyers/BreezeAhead",
             link2: "",
             image: "/project-photos/breezeahead.png"
