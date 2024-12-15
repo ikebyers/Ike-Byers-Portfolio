@@ -1,11 +1,11 @@
-// import React from 'react';
+import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 
 const Project = ({ title, description, techStack, link, link2, image }) => {
     // possibly add description into the card and make a flipping functionality to show a short description on the back side of the project card
     return (
             <div className="col">
-                <div className="card">
+                <div className="project-card">
                     <img src={image} className="card-img-top" alt="..."></img>
                     <div className="card-body">
                         <h3 className="card-title">{title}</h3>

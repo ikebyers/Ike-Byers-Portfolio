@@ -27,7 +27,7 @@ const Nav = () => {
                 </button>
                 <div className="collapse navbar-collapse nav-items-cus" id="navbarNavAltMarkup">
                     <div className="navbar-nav nav-items-ul">
-                        <ul className="nav nav-pills nav-fill nav-items-ul gap-5">
+                        <ul className="nav nav-pills nav-fill nav-items-ul">
                             <li className="nav-item nav-single-item">
                                 <NavLink
                                     className="nav-link nav-link-cus"
@@ -41,11 +41,11 @@ const Nav = () => {
                                     Portfolio
                                 </NavLink>
                             </li>
-                            <li className="nav-item nav-single-item">
+                            {/* <li className="nav-item nav-single-item">
                                 <NavLink className="nav-link nav-link-cus" to="/resume" activeClassName="active">
                                     Resume
                                 </NavLink>
-                            </li>
+                            </li> */}
                             <li className="nav-item nav-single-item">
                                 <NavLink className="nav-link nav-link-cus" to="/contact" activeClassName="active">
                                     Contact
@@ -57,7 +57,9 @@ const Nav = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <button type="button" className="btn btn-outline-primary me-5">Download Resume</button>
+                                <button type="button" className="btn btn-outline-primary nav-resume">Download Resume&nbsp;
+                                    <img className='pdf-icon' src='/download-pdf.png'></img>
+                                </button>
                             </a>
                         </ul>
                     </div>

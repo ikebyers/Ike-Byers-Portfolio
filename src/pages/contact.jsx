@@ -17,7 +17,7 @@ export default function Contact() {
 
     return (
         <div>
-            <h1>Contact Me</h1>
+            <h1 className="page-title">Contact Me</h1>
             <div>If you have any questions or want to connect, feel free to reach out through the contact form below.</div>
             <form onSubmit={handleFormSubmit}>
                 <div className="mb-3">
