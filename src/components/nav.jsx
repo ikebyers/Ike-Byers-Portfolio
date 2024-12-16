@@ -51,7 +51,7 @@ const Nav = () => {
                                     Contact
                                 </NavLink>
                             </li>
-                            <a
+                            <li
                                 href="/ikebyersresume.pdf"
                                 className="resume-download-btn"
                                 target="_blank"
@@ -60,7 +60,7 @@ const Nav = () => {
                                 <button type="button" className="btn btn-outline-primary nav-resume">Download Resume&nbsp;
                                     <img className='pdf-icon' src='/download-pdf.png'></img>
                                 </button>
-                            </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
