@@ -16,7 +16,7 @@ const Portfolio = () => {
             title: "JIMK Connect 4",
             intro: "An online, virtual spin to the classic boardgame",
             description: "Connect 4 is a two-player board game where players take turns dropping colored discs into a vertical grid. The first player to get four discs in a row (horizontally, vertically, or diagonally) wins the game. This project is a digital implementation of the classic game utilizing Socket.io for online multiplayer capabilities.",
-            techStack: ["MongoDB", "TypeScript", "CSS", "Express", "React", "Socket.io"],
+            techStack: ["MongoDB", "TypeScript", "CSS", "React", "Socket.io"],
             link: "https://github.com/keithrsialana/jimk-connect4",
             link2: "https://jimk-connect4.onrender.com/",
             image: "/project-photos/jimkConnect4.png"

@@ -382,10 +382,6 @@ ul {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
 }
 
-.project-card {
-
-}
-
 .read-the-docs {
   color: #888;
 }
@@ -453,11 +449,10 @@ ul {
   display: flex;
   flex-wrap: wrap; 
   align-items: stretch;
-  
+  max-height: max-content;
 }
 
 .project-card-container {
-  
   perspective: 1000px; /* Enables the 3D effect */
   cursor: pointer;
   margin: 0; /* Remove default margin */
@@ -507,6 +502,8 @@ ul {
 .card-face.back {
   transform: rotateY(180deg);
   z-index: 1;
+  background-color: var(--bs-neutral);
+  color: white;
 }
 
 .card-body {
@@ -516,18 +513,56 @@ ul {
   flex: 1; 
 }
 
+.project-intro {
+  text-align: start;
+  color: white;
+}
+
 .project-desc {
   text-align: start;
+  color: white;
+}
+
+.project-ts-container {
+
+}
+
+.project-tst {
+  text-align: center;
+  color: var(--bs-neutral);
+  background-color: var(--bs-tertiary);
+  width: 100%;
+  margin-bottom: 0rem !important;
+  border-radius: 15px;
 }
 
 .project-tech-stack {
-  text-align: end;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.project-back-title {
+  justify-content: center;
+  color: var(--bs-quaternary);
+  padding: 1rem;
+  border-radius: 15px;
 }
 
 .project-link-icons {
   display: flex;
   justify-content: center;
   justify-content: end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.project-link-icons-back {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
 }
