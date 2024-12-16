@@ -46,11 +46,11 @@ const Nav = () => {
                                     Resume
                                 </NavLink>
                             </li> */}
-                            <li className="nav-item nav-single-item">
+                            {/* <li className="nav-item nav-single-item">
                                 <NavLink className="nav-link nav-link-cus" to="/contact" activeClassName="active">
                                     Contact
                                 </NavLink>
-                            </li>
+                            </li> */}
                             <li>
                                 <a
                                     type="button"

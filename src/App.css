@@ -455,7 +455,7 @@ ul {
 .project-card-container {
   perspective: 1000px; /* Enables the 3D effect */
   cursor: pointer;
-  margin: 0; /* Remove default margin */
+  margin: 1.5rem; /* Remove default margin */
   padding: 0; /* Remove any padding */
   position: relative;
   height: 450px;
@@ -513,14 +513,18 @@ ul {
   flex: 1; 
 }
 
+.project-title {
+  color: white;
+}
+
 .project-intro {
   text-align: start;
-  color: white;
+  color: lightgray;
 }
 
 .project-desc {
   text-align: start;
-  color: white;
+  color: lightgray;
 }
 
 .project-ts-container {
@@ -533,21 +537,24 @@ ul {
   background-color: var(--bs-tertiary);
   width: 100%;
   margin-bottom: 0rem !important;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .project-tech-stack {
   text-align: center;
-  color: white;
+  color: var(--bs-tertiary);
+  border-style: solid;
+  border-color: var(--bs-quaternary);
+  border-top: none;
   padding: 1rem;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 
 .project-back-title {
-  justify-content: center;
-  color: var(--bs-quaternary);
-  padding: 1rem;
+  justify-content: start;
+  color: white;
   border-radius: 15px;
 }
 
@@ -555,31 +562,34 @@ ul {
   display: flex;
   justify-content: center;
   justify-content: end;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
 .project-link-icons-back {
   display: flex;
-  justify-content: center;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: end;
+  gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
-.text-tertiary:hover svg {
-  fill: var(--bs-quaternary) !important; /* Change to success color on hover */
+.text-quarternary:hover svg {
+  fill: var(--bs-tertiary) !important; /* Change to success color on hover */
   transition: fill 0.3s ease;
 }
 
 .svg-link {
-  color: var(--bs-tertiary); /* Default color */
+  color: var(--bs-quaternary); /* Default color */
   transition: color 0.3s ease; /* Smooth transition for hover */
 }
 
 /* Hover state */
 .svg-link:hover {
-  color: var(--bs-quaternary); /* Hover color */
+  color: var(--bs-tertiary); /* Hover color */
+}
+
+@media (max-width: 1076px) {
+  
 }
 
 @media (max-width: 990px) {

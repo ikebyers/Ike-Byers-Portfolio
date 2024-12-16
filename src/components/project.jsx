@@ -11,7 +11,7 @@ const Project = ({ title, intro, description, techStack, link, link2, image }) =
                     {/* Front Side */}
                     <div className="card-face front">
                         <div className='project-link-icons'>
-                            <a href={link} target="_blank" rel="noopener noreferrer" className='text-tertiary'>
+                            <a href={link} target="_blank" rel="noopener noreferrer" className='text-quarternary'>
                                 <FaGithub size={40} />
                             </a>
                             {link2 && (
@@ -30,7 +30,7 @@ const Project = ({ title, intro, description, techStack, link, link2, image }) =
                             )}
                         </div>
                         <div className="card-body">
-                            <h3 className="card-title text-left font-size-md font-bold">{title}</h3>
+                            <h3 className="card-title text-left font-size-md font-bold project-title">{title}</h3>
                             <div className="font-size-xs project-intro font-italic">{intro}</div>
                             <br />
                             <div>
@@ -43,9 +43,8 @@ const Project = ({ title, intro, description, techStack, link, link2, image }) =
                     {/* Back Side */}
                     <div className="card-face back">
                         <div className="card-body">
-                            <h3 className="card-title text-left font-size-md font-bold project-back-title">About this Project</h3>
-                            <div className='project-link-icons-back'>
-                                <a href={link} target="_blank" rel="noopener noreferrer" className='text-tertiary'>
+                        <div className='project-link-icons-back'>
+                                <a href={link} target="_blank" rel="noopener noreferrer" className='text-quarternary'>
                                     <FaGithub size={40} />
                                 </a>
                                 {link2 && (
@@ -63,6 +62,7 @@ const Project = ({ title, intro, description, techStack, link, link2, image }) =
                                     </a>
                                 )}
                             </div>
+                            <h3 className="card-title text-left font-size-md font-bold project-back-title">About this Project</h3>
                             <p className="font-size-xs project-desc">{description}</p>
                         </div>
                     </div>
