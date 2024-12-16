@@ -22,12 +22,12 @@ const Footer = () => {
                     <a href="https://open.spotify.com/artist/6lA0hlZQNMpHpsQ9ki8KEF?si=nvfbf66_SNKERGylvSRWsw" target="_blank" rel="noopener noreferrer" className="footer-icons text-center">
                         <FaSpotify size={24} />
                     </a>
-                    <a href="https://www.instagram.com/yesbeki/" target="_blank" rel="noopener noreferrer" className="footer-icons text-center">
+                    {/* <a href="https://www.instagram.com/yesbeki/" target="_blank" rel="noopener noreferrer" className="footer-icons text-center">
                         <FaInstagram size={24} />
                     </a>
                     <a href="https://www.youtube.com/@yesbeki" target="_blank" rel="noopener noreferrer" className="footer-icons text-center">
                         <FaYoutube size={24} />
-                    </a>
+                    </a> */}
                 </div>
                 </div>
             </div>

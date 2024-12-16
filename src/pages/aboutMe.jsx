@@ -28,7 +28,7 @@ const AboutMe = () => {
                 </div>
                 <div className='split-screen'>
                     <div className='left-half'>
-                    <div className='social-icons'>
+                    <div className='social-icons portrait-icons'>
                             <a
                                 href="https://github.com/ikebyers" target="_blank" rel="noopener noreferrer" className='text-quarternary'>
                                 <FaGithub size={35} />

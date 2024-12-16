@@ -19,20 +19,34 @@
   flex: 1; 
 } */
 
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100vw; /* Ensure full viewport width */
+  margin: 0;
+  padding: 0;
+}
+
 .text-neutral {
   color: var(--bs-neutral);
 }
 
 .text-secondary {
-  color: var(--bs-secondary)
+  color: var(--bs-secondary);
 }
 
 .text-tertiary {
-  color: var(--bs-tertiary)
+  color: var(--bs-tertiary) !important;
 }
 
 .text-quarternary {
-  color: var(--bs-quaternary)
+  color: var(--bs-quaternary);
 }
 
 .font-size-xs {
@@ -75,14 +89,14 @@
   text-justify: center;
 }
 
-.text-right {
-  display: flex;
-  text-justify: end;
-}
-
 .text-left {
   display: flex;
-  text-justify: start;
+  text-justify: start !important;
+}
+
+.text-right {
+  display: flex;
+  justify-content: end !important;
 }
 
 .font-bold {
@@ -141,6 +155,7 @@ h1 {
 }
 
 nav {
+  position: sticky;
   min-width: 490px;
   margin-top: 1rem;
   margin-left: 2rem !important;
@@ -204,6 +219,7 @@ ul {
 
 .nav-link-cus.active {
   color: var(--bs-neutral) !important; 
+  background-color: var(--bs-neutral);
   font-weight: bold;
 }
 
@@ -219,9 +235,10 @@ ul {
   grid-template-rows: auto; 
   width: 100%;
   margin-top: 5rem;
+  max-height: fit-content;
   /* margin-bottom: 3rem; */
   /* justify-content: space-evenly !important; */
-  max-height: 42vh;
+  max-height: 50vh;
 }
 
 .portrait-container {
@@ -238,6 +255,7 @@ ul {
 .portrait-icons {
   display: flex;
   flex-direction: row;
+  margin: ;
 }
 
 .bio-image {
@@ -365,11 +383,7 @@ ul {
 }
 
 .project-card {
-  padding: 2em;
-  justify-content: center;
-  background-color: var(--bs-neutral);
-  border-radius: 25px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
+
 }
 
 .read-the-docs {
@@ -405,17 +419,132 @@ ul {
 
 .nav-link-cus {
   border-radius: 5px;
-  color: var(--bs-tertiary);
+  color: var(--bs-quaternary);
 }
 
 .nav-bg {
   background-color: var(--bs-neutral);
 }
 
-.pdf-icon {
-  max-width: 25px;
+.resume-btn {
+  background-color: var(--bs-tertiary);
+  color: var(--bs-neutral);
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 5px;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.resume-btn:hover {
+  background-color: var(--bs-quaternary) !important;
+  transition: fill 0.7s ease;
+}
+
+.pdf-icon {
+  max-width: 25px;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#project-cards {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: stretch;
+  
+}
+
+.project-card-container {
+  
+  perspective: 1000px; /* Enables the 3D effect */
+  cursor: pointer;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove any padding */
+  position: relative;
+  height: 450px;
+  box-shadow: none; /* Ensure no extra shadows */
+}
+
+.project-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  padding: 0; /* Remove inner padding */
+  margin: 0; /* Remove margin */
+}
+
+.project-card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.card-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 25px; /* Keeps rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  background-color: var(--bs-neutral);
+  color: var(--bs-tertiary);
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-face.front {
+  z-index: 2;
+}
+
+.card-face.back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; 
+}
+
+.project-desc {
+  text-align: start;
+}
+
+.project-tech-stack {
+  text-align: end;
+}
+
+.project-link-icons {
+  display: flex;
+  justify-content: center;
+  justify-content: end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.text-tertiary:hover svg {
+  fill: var(--bs-quaternary) !important; /* Change to success color on hover */
+  transition: fill 0.3s ease;
+}
+
+.svg-link {
+  color: var(--bs-tertiary); /* Default color */
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Hover state */
+.svg-link:hover {
+  color: var(--bs-quaternary); /* Hover color */
 }
 
 @media (max-width: 990px) {
@@ -452,10 +581,6 @@ ul {
     flex-direction: column;
     justify-content: start !important;
   }
-
-  .nav-resume {
-    margin-right: 0rem;
-  }
 }
 
 @media (max-width: 901px) {
@@ -472,7 +597,7 @@ ul {
 
   .social-icons {
     margin-top: 0rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     padding: 0rem;
   }
 

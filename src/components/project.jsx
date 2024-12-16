@@ -1,24 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 
-const Project = ({ title, description, techStack, link, link2, image }) => {
-    // possibly add description into the card and make a flipping functionality to show a short description on the back side of the project card
+const Project = ({ title, intro, description, techStack, link, link2, image }) => {
+    const [isFlipped, setIsFlipped] = useState(false); // State to track the flip
+
     return (
-            <div className="col">
-                <div className="project-card">
-                    <img src={image} className="card-img-top" alt="..."></img>
-                    <div className="card-body">
-                        <h3 className="card-title">{title}</h3>
-                        <div className="card-text">{description}</div>
-                        <br></br>
-                        <h5 className="card-tech-stack">{techStack.join(', ')}</h5>
-                        <a href={link} target="_blank" rel="noopener noreferrer">
-                        <FaGithub size={24} /></a>
-                        <a href={link2} target="_blank" rel="noopener noreferrer">Deployed App</a>
+        <div>
+            <div className="col project-card-container" onClick={() => setIsFlipped(!isFlipped)}>
+                <div className={`project-card ${isFlipped ? 'flipped' : ''}`}>
+                    {/* Front Side */}
+                    <div className="card-face front">
+                        <div className='project-link-icons'>
+                            <a href={link} target="_blank" rel="noopener noreferrer" className='text-tertiary'>
+                                <FaGithub size={40} />
+                            </a>
+                            {link2 && (
+                                <a href={link2} target="_blank" rel="noopener noreferrer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="42" height="42" className="svg-link">
+                                        <path
+                                            d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="32"
+                                        />
+                                    </svg>
+                                </a>
+                            )}
+                        </div>
+                        <div className="card-body">
+                            <h3 className="card-title text-left font-size-md font-bold">{title}</h3>
+                            <div className="font-size-xs project-desc">{intro}</div>
+                            <br />
+                            <h5 className="card-tech-stack text-quarternary text-mono">{techStack.join(' • ')}</h5>
+                        </div>
+                    </div>
+
+                    {/* Back Side */}
+                    <div className="card-face back">
+                        <div className="card-body">
+                            <h3 className="card-title text-left font-size-md">About this Project</h3>
+                            <p className="font-size-xs">{description}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-    )
-}
+        </div>
+    );
+};
 
 export default Project;

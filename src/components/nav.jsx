@@ -10,7 +10,7 @@ const Nav = () => {
             <div className="container-fluid">
                 <NavLink className="navbar-brand" to="/">
                     <div className="container">
-                        <a className="navbar-brand " href="#">
+                        <a className="navbar-brand" href="#">
                             <img className="nav-logo" src="/ikelogo3.png" alt="ike byers logo" width="250" height="50"></img>
                         </a>
                     </div>
@@ -32,7 +32,7 @@ const Nav = () => {
                                 <NavLink
                                     className="nav-link nav-link-cus"
                                     exact to="/"
-                                    activeClassName="active">
+                                >
                                     About Me
                                 </NavLink>
                             </li>
@@ -51,15 +51,20 @@ const Nav = () => {
                                     Contact
                                 </NavLink>
                             </li>
-                            <li
-                                href="/ikebyersresume.pdf"
-                                className="resume-download-btn"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <button type="button" className="btn btn-outline-primary nav-resume">Download Resume&nbsp;
-                                    <img className='pdf-icon' src='/download-pdf.png'></img>
-                                </button>
+                            <li>
+                                <a
+                                    type="button"
+                                    className="resume-btn nav-resume"
+                                    href="/ikebyersresume.pdf" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Download Resume&nbsp;&nbsp;
+                                    <img
+                                        className='text-tertiary'
+                                        src="/download-outline.svg"
+                                        alt="pdf icon"
+                                        style={{ width: '20px', height: '20px', verticalAlign: 'middle' }}
+                                    />
+                                </a>
                             </li>
                         </ul>
                     </div>
