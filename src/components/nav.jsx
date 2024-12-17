@@ -15,16 +15,18 @@ const Nav = () => {
                         </a>
                     </div>
                 </NavLink>
-                <button
-                    className="navbar-toggler me-4"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+                <div>
+                    <button
+                        className="navbar-toggler navbar-toggle-button me-4"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                </div>
                 <div className="collapse navbar-collapse nav-items-cus" id="navbarNavAltMarkup">
                     <div className="navbar-nav nav-items-ul">
                         <ul className="nav nav-pills nav-fill nav-items-ul">

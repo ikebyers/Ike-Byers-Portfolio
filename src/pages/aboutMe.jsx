@@ -84,8 +84,6 @@ const AboutMe = () => {
                     </div>
                 </div>
                 <form className="contact-form">
-                    <div className='font-bold font-size-md'>Want me to reach out instead?</div>
-                    <br/>
                     <div className='form-container'>
                         <div className="form-row">
                             <input type="text" placeholder="First Name" className="form-input" />

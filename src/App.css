@@ -165,13 +165,17 @@ h1 {
 
 nav {
   position: sticky;
-  /* min-width: 490px; */
+  min-width: none;
   margin-top: 1rem;
   margin-left: 2rem !important;
   margin-right: 2rem !important;
   border-radius: 50px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
   display: flex;
+}
+
+.navbar-toggler {
+  border-radius: 15px;
 }
 
 footer {
@@ -448,21 +452,25 @@ ul {
   justify-content: end;
   display: flex;
   margin: 1rem;
+  padding: 1rem;
 }
 
 .nav-items-ul {
   justify-content: space-evenly;
   display: flex;
   gap: 2rem;
+  justify-content: start;
+  align-items: start;
 }
 
 .nav-single-item {
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   display: flex;
+  width: max-content;
 }
 
 .nav-resume {
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
 }
 
 .nav-link-cus {
@@ -477,7 +485,6 @@ ul {
 .resume-btn {
   background-color: var(--bs-tertiary);
   color: var(--bs-neutral);
-  display: inline-flex;
   text-decoration: none;
   border-radius: 5px;
   align-items: center;
@@ -764,21 +771,27 @@ ul {
   text-align: center;
   margin-right: 1rem;
   margin-left: 1rem;
+  width: 100%;
 }
 
 .form-row {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   gap:1rem;
 }
 
 .form-container {
   justify-content: center;
+  width: 100%;
+  max-width: 600px;
 }
 
 .form-input {
   flex: 1;
   padding: 1rem;
+  width: 100%;
+  /* min-width: 0; */
   border: 1px solid;
   font-size: 1rem;
   color: var(--bs-neutral);
@@ -821,6 +834,7 @@ ul {
   border-radius: 25px;
   cursor: pointer;
   text-transform: uppercase;
+  justify-content: center;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
   max-width: fit-content;
@@ -834,9 +848,6 @@ ul {
 }
 
 @media (max-width: 990px) {
-  .navbar-toggler {
-    display: block; /* Show the button starting at 1070px and below */
-  }
 
   nav {
     justify-content: start;
@@ -946,10 +957,48 @@ ul {
     align-items: center;
     text-align: center;
   }
+
+  .form-textarea {
+
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form-input {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form-row {
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 1rem; /* Spacing between inputs */
+  }
+
+  .form-input {
+    width: 100%; /* Full width for smaller screens */
+    box-sizing: border-box; /* Include padding in width */
+  }
+
+  .form-textarea {
+    width: 100%; /* Full width for textarea */
+    box-sizing: border-box;
+  }
+
+  .submit-button {
+    display: flex;
+    width: 100%; /* Full width for submit button */
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 490px) {
   .navbar-toggler {
-    display: none;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
   }
 }
