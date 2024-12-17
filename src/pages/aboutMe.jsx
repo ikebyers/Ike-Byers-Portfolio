@@ -28,7 +28,7 @@ const AboutMe = () => {
                 </div>
                 <div className='split-screen'>
                     <div className='left-half'>
-                    <div className='social-icons portrait-icons'>
+                        <div className='social-icons portrait-icons'>
                             <a
                                 href="https://github.com/ikebyers" target="_blank" rel="noopener noreferrer" className='text-quarternary icon'>
                                 <FaGithub size={35} />
@@ -69,10 +69,36 @@ const AboutMe = () => {
                         <p className='font-size-xs'>Over the past few months, I’ve immersed myself in web development, completing EdX's <span className="font-bold text-tertiary">full-stack web development</span> program through <span className="font-bold text-tertiary">University of North Carolina at Charlotte</span> and began creating projects that challenged me to learn new concepts and problem-solve on the fly. Whether it’s building a responsive web application or experimenting with TypeScript frameworks, I thrive on tackling obstacles head-on and finding innovative solutions.</p>
 
                         <p className='font-size-xs'>Looking forward, I’m excited to continue expanding my skill set in web development and explore new programs. My goal is to contribute to projects that blend creativity and technology to create engaging user experiences. I’m eager to learn from every opportunity and push my boundaries as a developer.</p>
-
-
                     </div>
                 </div>
+            </div>
+            <div className="contact-section">
+                <div className="contact-info">
+                    <div className='text-bold font-size-xl text-tertiary'>Contact</div>
+                    <div className='font-size-md'>Let's chat!</div>
+                    <br/>
+                    <div className='contact-card'>
+                        <p>Email: <a href="mailto:ogawameria@gmail.com" className="text-link">ikebyersmgmt@gmail.com</a></p>
+                        <p>Phone: <span className='font-bold phone-text'>+1 785-447-1914</span></p>
+                        <p>instagram: <a href="https://instagram.com/yesbeki" className="text-link">@yesbeki</a></p>
+                    </div>
+                </div>
+                <form className="contact-form">
+                    <div className='font-bold font-size-md'>Want me to reach out instead?</div>
+                    <br/>
+                    <div className='form-container'>
+                        <div className="form-row">
+                            <input type="text" placeholder="First Name" className="form-input" />
+                            <input type="text" placeholder="Last Name" className="form-input" />
+                        </div>
+                        <div className="form-row">
+                            <input type="email" placeholder="Email" className="form-input" />
+                            <input type="text" placeholder="Phone" className="form-input" />
+                        </div>
+                        <textarea placeholder="Type your message here..." className="form-textarea"></textarea>
+                    </div>
+                    <button type="submit" className="submit-button">SUBMIT</button>
+                </form>
             </div>
         </div>
     )

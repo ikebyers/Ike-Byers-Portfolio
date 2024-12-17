@@ -24,13 +24,13 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
+  /* overflow-x: hidden; */
+  /* box-sizing: border-box; */
 }
 
 main, #root {
   width: 100vw; 
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   margin: 0;
   padding: 0;
 }
@@ -183,9 +183,8 @@ footer {
   text-justify: center !important;
   background-color: var(--bs-neutral);
   border-radius: 70px;
-  /* max-width: max-content; */
   height: max-content;
-  padding: 1rem;
+  padding: 1.5rem;
   margin: 2rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
 }
@@ -199,6 +198,23 @@ footer {
   flex-direction: row;
   gap: 2rem !important;
   /* margin: 0.5rem; */
+}
+
+.footer-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bs-tertiary); /* Default icon color */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, color 0.3s ease-out;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2); /* Slightly scale up on hover */
+  color: var(--bs-quaternary); /* Change color on hover */
+}
+
+.footer-icons a:active {
+  transform: scale(0.95); /* Slight shrink effect on click */
 }
 
 .icon {
@@ -687,8 +703,122 @@ ul {
   transform: scale(1.1); /* Slightly enlarge */
 }
 
-@media (max-width: 1190px) {
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 3rem 5rem;
+  padding: 2rem;
+  border-radius: 15px;
+  
+}
 
+.contact-card {
+  background-color: var(--bs-neutral);
+  padding: 2rem;
+  width: max-content;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
+}
+
+.contact-info {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--bs-quaternary);
+  
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  color: white;
+}
+
+.text-link {
+  color: var(--bs-tertiary);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.phone-text {
+  color: var(--bs-tertiary);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap:1rem;
+}
+
+.form-container {
+}
+
+.form-input {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid;
+  font-size: 1rem;
+  color: var(--bs-neutral);
+  background-color: var(--bs-quaternary);
+  border-radius: 25px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--bs-neutral); /* Slightly darker color */
+  font-style: italic; /* Italicize the text */
+  font-size: 1rem; /* Ensure consistent font size */
+}
+
+.form-textarea {
+  display: flex;
+  /* margin: 1rem; */
+  width: 100%;
+  height: 6rem;
+  padding: 1rem;
+  border: 1px solid;
+  border-color: var(--bs-neutral);
+  border-style: solid;
+  font-size: 1rem;
+  background-color: var(--bs-quaternary);
+  border-radius: 25px;
+  color: var(--bs-neutral);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
+}
+
+.submit-button {
+  background-color: var(--bs-tertiary);
+  color: var(--bs-neutral);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  max-width: fit-content;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Backdrop shadow */
+}
+
+.submit-button:hover {
+  background-color: var(--bs-quaternary);
+  color: ;
+  transform: scale(1.05);
 }
 
 @media (max-width: 990px) {
@@ -746,17 +876,14 @@ ul {
     padding: 0rem;
   }
 
-
-
-
   .portrait-container {
     display: flex;
-    justify-content: center !important; /* Center image horizontally */
+    justify-content: center !important;
     align-items: center;
   }
 
   .bio-image {
-    max-width: 20%; /* Adjust the image size for smaller screens */
+    max-width: 20%; 
     min-width: 40%;
     min-height: 20%;
     max-height: 40%;
@@ -773,7 +900,7 @@ ul {
 
   .intro-card {
     display: flex;
-    text-align: start; /* Optional: Center text content */
+    text-align: start;
     margin: 1rem;
     justify-content: center;
   }
@@ -785,19 +912,26 @@ ul {
   .bio-grid {
     background-color: var(--bs-quaternary);
     background-color: var(--bs-quaternary);
-    width: 100%; /* Ensure it spans full width */
-    margin: 0; /* Remove any margins */
+    width: 100%; 
+    margin: 0;
   }
 
   .split-screen {
-    display: block; /* Switch from flex to block layout */
+    display: block;
   }
 
   .right-half {
-    width: 100%; /* Make the right-half take full width */
+    width: 100%;
     display: flex;
-    justify-content: center !important; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    padding: 2rem; /* Optional padding for spacing */
+    justify-content: center !important; 
+    align-items: center; 
+    padding: 2rem; 
+  }
+
+  .contact-section {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
 }
