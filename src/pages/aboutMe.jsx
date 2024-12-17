@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaSpotify, FaYoutube, FaInstagram } from 'react-i
 
 const AboutMe = () => {
     return (
-        <div>
+        <div className='about-me-container'>
             <div className="page-tab">
                 <h1 className="page-title">About Me</h1>
             </div>
