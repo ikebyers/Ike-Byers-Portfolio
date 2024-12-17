@@ -46,7 +46,7 @@ const AboutMe = () => {
                             <div className='font-size-md tech-card-title text-neutral text-mono'>Technologies:
                             </div>
                             <div className='tech-grid'>
-                                <div className='fonst-size-sm tech-grid-item'>‣ JavaScript(ES6+)</div>
+                                <div className='fonst-size-xxs tech-grid-item'>‣ JavaScript(ES6+)</div>
                                 <div className='fonst-size-sm tech-grid-item'>‣ TypeScript</div>
                                 <div className='fonst-size-sm tech-grid-item'>‣ HTML5/CSS3</div>
                                 <div className='fonst-size-sm tech-grid-item'>‣ Node.js</div>
