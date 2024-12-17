@@ -6,7 +6,7 @@ const Project = ({ title, intro, description, techStack, link, link2, image }) =
 
     return (
         <div>
-            <div className="col project-card-container" onClick={() => setIsFlipped(!isFlipped)}>
+            <div className="project-card-container" onClick={() => setIsFlipped(!isFlipped)}>
                 <div className={`project-card ${isFlipped ? 'flipped' : ''}`}>
                     {/* Front Side */}
                     <div className="card-face front">

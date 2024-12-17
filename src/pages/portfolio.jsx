@@ -1,7 +1,27 @@
-// import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Project from '../components/project.jsx';
 
 const Portfolio = () => {
+    const [gridClass, setGridClass] = useState("row row-cols-1 row-cols-md-3 g-3");
+
+    // Function to update the grid class based on screen width
+    const updateGridClass = () => {
+        if (window.innerWidth <= 1190) {
+            setGridClass("row row-cols-1 row-cols-md-2 g-3"); // 2 columns
+        } else {
+            setGridClass("row row-cols-1 row-cols-md-3 g-3"); // 3 columns
+        }
+    };
+
+    // UseEffect to listen to window resize and set class dynamically
+    useEffect(() => {
+        updateGridClass(); // Initial check
+        window.addEventListener("resize", updateGridClass);
+
+        // Cleanup event listener
+        return () => window.removeEventListener("resize", updateGridClass);
+    }, []);
+
     const projects = [
         {
             title: "Playlist Persona",
@@ -33,7 +53,7 @@ const Portfolio = () => {
         {
             title: "Rainy Day Fund",
             intro: "A savings calculator focused on building user budgets",
-            description: "'Rainy Day Fund' is a savings calculator designed to take a user's given income and expenses and calculate their working budget. In addition, this app also allows users to create savings goals dynamically with their income and expenses if they change over time, allowing the user to effectively adjust their budget to reach their intended goals",
+            description: "'Rainy Day Fund' is a savings calculator designed to take a user's given income and expenses and calculate their working budget. In addition, this app also allows users to create savings goals dynamically with their income and expenses if they change over time, allowing the user to effectively adjust their budget to reach their intended goal.",
             techStack: ["HTML", "CSS", "JavaScript"],
             link: "https://github.com/ikebyers/Rainy-Day-Fund",
             link2: "",
@@ -62,20 +82,20 @@ const Portfolio = () => {
     return (
         <div className="portfolio-page">
             <h1 className="page-title">Projects</h1>
-                <div id="project-cards" className="row row-cols-1 row-cols-md-3 g-3">
+            {/* Dynamically change class */}
+            <div id="project-cards" className={gridClass}>
                 {projects.map((project, index) => (
                     <Project
-                    key={index}
-                    title={project.title}
-                    intro={project.intro}
-                    description={project.description}
-                    techStack={project.techStack}
-                    link={project.link}
-                    link2={project.link2}
-                    // image={project.image}
+                        key={index}
+                        title={project.title}
+                        intro={project.intro}
+                        description={project.description}
+                        techStack={project.techStack}
+                        link={project.link}
+                        link2={project.link2}
                     />
-                    ))}
-                </div>
+                ))}
+            </div>
         </div>
     );
 };

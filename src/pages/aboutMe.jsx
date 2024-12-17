@@ -30,13 +30,13 @@ const AboutMe = () => {
                     <div className='left-half'>
                     <div className='social-icons portrait-icons'>
                             <a
-                                href="https://github.com/ikebyers" target="_blank" rel="noopener noreferrer" className='text-quarternary'>
+                                href="https://github.com/ikebyers" target="_blank" rel="noopener noreferrer" className='text-quarternary icon'>
                                 <FaGithub size={35} />
                             </a>
-                            <a href="https://www.linkedin.com/in/ike-byers-9381b0185/" target="_blank" rel="noopener noreferrer" className='text-quarternary'>
+                            <a href="https://www.linkedin.com/in/ike-byers-9381b0185/" target="_blank" rel="noopener noreferrer" className='text-quarternary icon'>
                                 <FaLinkedin size={35} />
                             </a>
-                            <a href="https://open.spotify.com/artist/6lA0hlZQNMpHpsQ9ki8KEF?si=nvfbf66_SNKERGylvSRWsw" target="_blank" rel="noopener noreferrer" className='text-quarternary'>
+                            <a href="https://open.spotify.com/artist/6lA0hlZQNMpHpsQ9ki8KEF?si=nvfbf66_SNKERGylvSRWsw" target="_blank" rel="noopener noreferrer" className='text-quarternary icon'>
                                 <FaSpotify size={35} />
                             </a>
                         </div>

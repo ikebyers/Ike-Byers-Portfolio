@@ -161,7 +161,7 @@ h1 {
 }
 
 nav {
-  position: sticky;
+  position: relative;
   min-width: 490px;
   margin-top: 1rem;
   margin-left: 2rem !important;
@@ -202,8 +202,13 @@ footer {
 }
 
 .icon {
-  margin: 1rem;
 }
+
+.icon:hover {
+  transform: scale(1.1); /* Slightly scale up on hover */
+  transition: color 0.5s ease-out, transform 0.5s ease-out;
+}
+
 
 .social-icons {
   display: flex;
@@ -214,6 +219,7 @@ footer {
   text-align: center;
   gap: 1rem; /* Spacing between icons */
 }
+
 
 p {
   text-align: left;
@@ -227,7 +233,18 @@ ul {
 .nav-link-cus.active {
   color: var(--bs-neutral) !important; 
   background-color: var(--bs-neutral);
-  font-weight: bold;
+  transition: color 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.nav-link-cus:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  background-color: var(--bs-neutral);
+  transition: color 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.nav-link-cus:active {
+  transform: scale(0.95); /* Slightly shrink when clicked */
+  transition: color 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .about-me-section {
@@ -262,7 +279,7 @@ ul {
 .portrait-icons {
   display: flex;
   flex-direction: row;
-  margin: ;
+  gap: 2rem;
 }
 
 .bio-image {
@@ -445,8 +462,13 @@ ul {
 }
 
 .resume-btn:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  transition: box-shadow 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.resume-btn:hover {
   background-color: var(--bs-quaternary) !important;
-  transition: fill 0.7s ease;
+  transition: box-shadow 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .pdf-icon {
@@ -460,6 +482,7 @@ ul {
   flex-wrap: wrap; 
   align-items: stretch;
   max-height: max-content;
+  justify-content: center; /* Center align the cards */
 }
 
 .project-card-container {
@@ -470,15 +493,63 @@ ul {
   position: relative;
   height: 450px;
   box-shadow: none; /* Ensure no extra shadows */
+  display: flex;
+  flex: 1 1 auto; /* Allow flex growth */
+  transition: box-shadow 0.5s ease-out, transform 0.5s ease-out;
+  border-radius: 25px;
 }
 
+.project-card-container:hover {
+  box-shadow: 0 0 20px 5px rgba(200, 231, 99, 0.6); /* Light glow effect */
+  transform: scale(1.03);
+}
+
+.project-card-container::after {
+  content: "click for more info!";
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bs-quaternary);
+  color: var(--bs-neutral);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  /* transition: opacity 0.3s ease, transform 0.3s ease; */
+  pointer-events: none;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.project-card-container:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Remove hover effects and message when clicked */
+.project-card-container.clicked {
+  box-shadow: none; /* Remove glow */
+  transform: scale(1); /* Reset scale */
+  pointer-events: none; /* Prevent hover effects */
+}
+
+.project-card-container.clicked::after {
+  content: ""; /* Hide message */
+  visibility: hidden;
+  opacity: 0;
+}
 .project-card {
   width: 100%;
-  height: 100%;
+  min-width: 350px;
   position: relative;
   transition: transform 0.6s ease;
   transform-style: preserve-3d;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   padding: 0; /* Remove inner padding */
   margin: 0; /* Remove margin */
@@ -491,8 +562,6 @@ ul {
 /* Front and back faces */
 .card-face {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -503,6 +572,9 @@ ul {
   padding: 2em;
   display: flex;
   flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spread content */
 }
 
 .card-face.front {
@@ -565,6 +637,7 @@ ul {
 .project-back-title {
   justify-content: start;
   color: white;
+  margin-bottom: 1rem;
   border-radius: 15px;
 }
 
@@ -576,11 +649,26 @@ ul {
   margin-bottom: 2rem;
 }
 
+.project-link-icons a, 
+.project-link-icons-back a {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.project-link-icons a:hover, 
+.project-link-icons-back a:hover {
+  transform: scale(1.2); /* Scale up icons slightly on hover */
+}
+
+.project-link-icons a:active, 
+.project-link-icons-back a:active {
+  transform: scale(1); /* Reset scaling when clicked */
+}
+
 .project-link-icons-back {
   display: flex;
   justify-content: end;
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .text-quarternary:hover svg {
@@ -590,16 +678,17 @@ ul {
 
 .svg-link {
   color: var(--bs-quaternary); /* Default color */
-  transition: color 0.3s ease; /* Smooth transition for hover */
+  transition: color 0.3s ease-out, transform 0.3s ease-out;
 }
 
 /* Hover state */
 .svg-link:hover {
   color: var(--bs-tertiary); /* Hover color */
+  transform: scale(1.1); /* Slightly enlarge */
 }
 
-@media (max-width: 1076px) {
-  
+@media (max-width: 1190px) {
+
 }
 
 @media (max-width: 990px) {
@@ -657,6 +746,9 @@ ul {
     padding: 0rem;
   }
 
+
+
+
   .portrait-container {
     display: flex;
     justify-content: center !important; /* Center image horizontally */
@@ -676,6 +768,7 @@ ul {
 
   .intro-card-container {
     justify-content: center !important;
+    margin-left: 2rem;
   }
 
   .intro-card {
