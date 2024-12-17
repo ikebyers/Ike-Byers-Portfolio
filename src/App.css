@@ -291,7 +291,7 @@ ul {
   max-height: fit-content;
   /* margin-bottom: 3rem; */
   /* justify-content: space-evenly !important; */
-  /* max-height: 50vh; */
+  max-height: 50vh;
 }
 
 .portrait-container {
