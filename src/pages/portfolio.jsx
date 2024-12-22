@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Project from '../components/project.jsx';
 
 const Portfolio = () => {

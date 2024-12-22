@@ -33,7 +33,7 @@ export default function useContactForm() {
         }
     };
 
-    const handleFormSubmit = (event) => {
+    const handleFormSubmit = async (event) => {
         event.preventDefault();
 
         if (!name || !email || !message) {
@@ -46,13 +46,29 @@ export default function useContactForm() {
             return;
         }
 
-        alert("Thanks for reaching out! I'll get back to you as soon as possible.");
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, message }),
+            });
 
-        setName("");
-        setEmail("");
-        setMessage("");
-        setErrors({ name: '', email: '', message: '' });
-        setClicked({ name: false, email: false, message: false });
+            if (response.ok) {
+                alert("Thanks for reaching out! I'll get back to you as soon as possible.");
+                setName("");
+                setEmail("");
+                setMessage("");
+                setErrors({ name: '', email: '', message: '' });
+                setClicked({ name: false, email: false, message: false });
+            } else {
+                alert("There was an error submitting the form. Please try again later.");
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert("There was an error submitting the form. Please try again later.");
+        }
     };
 
     return {

@@ -7,9 +7,9 @@ import './custom.scss';
 
 import App from './App.jsx';
 import AboutMe from './pages/aboutMe.jsx';
-import Contact from './pages/contact.jsx';
+// import Contact from './pages/contact.jsx';
 import Portfolio from './pages/portfolio.jsx';
-import Resume from './pages/resume.jsx';
+// import Resume from './pages/resume.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,9 +17,9 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: '/', element: <AboutMe />},
-      { path: '/contact', element: <Contact />},
+      // { path: '/contact', element: <Contact />},
       { path: '/portfolio', element: <Portfolio />},
-      { path: '/resume', element: <Resume />}
+      // { path: '/resume', element: <Resume />}
     ],
   },
 ]);

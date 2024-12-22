@@ -1,8 +1,22 @@
 // import React from 'react';
-import Portfolio from '../components/project.jsx';
-import { FaGithub, FaLinkedin, FaSpotify, FaYoutube, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaSpotify } from 'react-icons/fa';
+// import { FaYoutube, FaInstagram } from 'react-icons/fa';
+import contactForm from '../components/contactForm';
 
 const AboutMe = () => {
+
+    const {
+        name,
+        email,
+        message,
+        errors,
+        clicked,
+        handleInputChange,
+        handleFormSubmit,
+        handleFocus,
+        handleValidation
+    } = contactForm();
+
     return (
         <div className='about-me-container'>
             <div className="page-tab">
@@ -62,11 +76,11 @@ const AboutMe = () => {
                     <div className="card bio-card">
                         <div className="font-size-lg text-tertiary font-bold">Bio</div>
                         <br></br>
-                        <p className='font-size-xs'>I'm a budding software developer with a passion for developing expertise in emerging technologies, learning on the fly, and solving problems creatively. While I recently transitioned into web development, my background in music recording and production has equipped me with a <span className="font-bold text-tertiary">keen eye for detail, problem-solving skills, rounded technical abilities and a drive to turn ideas into reality.</span></p>
+                        <p className='font-size-xs'>I&apos;m a budding software developer with a passion for developing expertise in emerging technologies, learning on the fly, and solving problems creatively. While I recently transitioned into web development, my background in music recording and production has equipped me with a <span className="font-bold text-tertiary">keen eye for detail, problem-solving skills, rounded technical abilities and a drive to turn ideas into reality.</span></p>
 
                         <p className='font-size-xs'>My journey began in the world of music, where I developed a love for creating immersive experiences through sound as a <span className="font-bold text-tertiary">music producer, recording engineer, and songwriter.</span> In this field, I honed my skills in critical listening, technical troubleshooting, and collaboration with artists to bring their visions to life. These experiences taught me how to approach challenges resourcefully and adapt to new technologies quickly.</p>
 
-                        <p className='font-size-xs'>Over the past few months, I’ve immersed myself in web development, completing EdX's <span className="font-bold text-tertiary">full-stack web development</span> program through <span className="font-bold text-tertiary">University of North Carolina at Charlotte</span> and began creating projects that challenged me to learn new concepts and problem-solve on the fly. Whether it’s building a responsive web application or experimenting with TypeScript frameworks, I thrive on tackling obstacles head-on and finding innovative solutions.</p>
+                        <p className='font-size-xs'>Over the past few months, I’ve immersed myself in web development, completing the<span className="font-bold text-tertiary">full-stack software development</span> program through <span className="font-bold text-tertiary">University of North Carolina at Charlotte</span> and began creating projects that challenged me to learn new concepts and problem-solve on the fly. Whether it’s building a responsive web application or experimenting with TypeScript frameworks, I thrive on tackling obstacles head-on and finding innovative solutions.</p>
 
                         <p className='font-size-xs'>Looking forward, I’m excited to continue expanding my skill set in web development and explore new programs. My goal is to contribute to projects that blend creativity and technology to create engaging user experiences. I’m eager to learn from every opportunity and push my boundaries as a developer.</p>
                     </div>
@@ -75,25 +89,54 @@ const AboutMe = () => {
             <div className="contact-section">
                 <div className="contact-info">
                     <div className='text-bold font-size-xl text-tertiary'>Contact</div>
-                    <div className='font-size-md'>Let's chat!</div>
+                    <div className='font-size-md'>Let&apos;s chat!</div>
                     <br/>
                     <div className='contact-card'>
-                        <p>Email: <a href="mailto:ogawameria@gmail.com" className="text-link">ikebyersmgmt@gmail.com</a></p>
+                        <p>Email: <a href="mailto:ikebyersmgmt@gmail.com" className="text-link">ikebyersmgmt@gmail.com</a></p>
                         <p>Phone: <span className='font-bold phone-text'>+1 785-447-1914</span></p>
                         <p>instagram: <a href="https://instagram.com/yesbeki" className="text-link">@yesbeki</a></p>
                     </div>
                 </div>
-                <form className="contact-form">
+                <form className="contact-form" onSubmit={handleFormSubmit}>
                     <div className='form-container'>
                         <div className="form-row">
-                            <input type="text" placeholder="First Name" className="form-input" />
-                            <input type="text" placeholder="Last Name" className="form-input" />
+                            <input
+                                id="name"
+                                type="text"
+                                placeholder="Name"
+                                className="form-input"
+                                value={name}
+                                onChange={handleInputChange}
+                                onFocus={() => handleFocus('name')}
+                                onBlur={() => handleValidation('name')}
+                            />
+                            {clicked.name && errors.name && <small className="text-danger">{errors.name}</small>}
                         </div>
                         <div className="form-row">
-                            <input type="email" placeholder="Email" className="form-input" />
-                            <input type="text" placeholder="Phone" className="form-input" />
+                            <input
+                                id="email"
+                                type="email"
+                                placeholder="Email"
+                                className="form-input"
+                                value={email}
+                                onChange={handleInputChange}
+                                onFocus={() => handleFocus('email')}
+                                onBlur={() => handleValidation('email')}
+                            />
+                            {clicked.email && errors.email && <small className="text-danger">{errors.email}</small>}
                         </div>
-                        <textarea placeholder="Type your message here..." className="form-textarea"></textarea>
+                        <div className="form-row">
+                            <textarea
+                                id="message"
+                                placeholder="Type your message here..."
+                                className="form-textarea"
+                                value={message}
+                                onChange={handleInputChange}
+                                onFocus={() => handleFocus('message')}
+                                onBlur={() => handleValidation('message')}
+                            />
+                            {clicked.message && errors.message && <small className="text-danger">{errors.message}</small>}
+                        </div>
                     </div>
                     <button type="submit" className="submit-button">SUBMIT</button>
                 </form>
