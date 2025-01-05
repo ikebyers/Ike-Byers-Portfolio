@@ -57,7 +57,7 @@ const Nav = () => {
                                 <a
                                     type="button"
                                     className="resume-btn nav-resume"
-                                    href="/ikebyersresume.pdf" target="_blank"
+                                    href="/Isaac_Ike_Byers_Resume_2025.pdf" target="_blank"
                                     rel="noopener noreferrer">
                                     Download Resume&nbsp;&nbsp;
                                     <img
