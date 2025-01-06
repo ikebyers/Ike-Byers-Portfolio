@@ -26,7 +26,7 @@ const AboutMe = () => {
                 <div className="about-me-grid">
                     <div className="portrait-container portrait-icons">
                         <img
-                            src="/ike-b-p1.jpg"
+                            src="/ike_portfolio_portrait.jpg"
                             className="bio-image"
                             alt="portrait of Ike Byers"
                         />
