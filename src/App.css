@@ -117,7 +117,7 @@ body {
 }
 
 h1 {
-  background-color: var(--bs-tertiary);
+  background-color: var(--bs-quaternary);
   color: var(--bs-neutral);
   max-width: max-content;
   font-size: 2rem;
@@ -130,7 +130,7 @@ h1 {
 }
 
 .page-tab {
-  background-color: var(--bs-quaternary) !important;
+  background-color: var(--bs-secondary) !important;
 
 }
 
